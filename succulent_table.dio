@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="n0gXyIaqqGbffvGer6sx" name="ページ1">
-        <mxGraphModel dx="867" dy="494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1079" dy="1663" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -56,6 +56,18 @@
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="830" y="160" as="sourcePoint"/>
                         <mxPoint x="460" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="　relationships テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="120" y="-120" width="180" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="・user&#10;・follow_od&#10;・followde_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="23">
+                    <mxGeometry y="30" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=0.992;exitY=0.12;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="24">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="300" y="-83" as="sourcePoint"/>
+                        <mxPoint x="120" y="130" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>

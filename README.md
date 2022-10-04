@@ -14,6 +14,7 @@
 has_many :tweets
 has_many :comments
 has_many :pictorial book
+has_many :relationships
 
 ## tweets テーブル
 
@@ -55,3 +56,16 @@ belongs_to :tweet
 ### Assosiation
 belongs_to :user
 belongs_to :tweet
+
+
+## Relationships テーブル
+
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| user               | references | null: false,foreign_key: true |
+| follow_id          | references | null: false,foreign_key: true |
+| followed_id        | integer    | null: false,foreign_key: true |
+
+### Assosiation
+belongs_to :user
+belongs_to :follow, class_name: 'User'
