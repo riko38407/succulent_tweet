@@ -1,49 +1,57 @@
+# テーブル設計
+
 ## users テーブル
 
 | Column             | Type     | Options                   |
 | ------------------ | -------- | ------------------------- |
-| nickname           | string   | null: false               |
+| name               | string   | null: false               |
 | email              | string   | null: false, unique: true |
 | encrypted_password | string   | null: false, unique: true |
+| profile            | text     | null: false               |
+| occupation         | text     | null: false               |
+
+### Assosiation
+has_many :tweets
+has_many :comments
+has_many :pictorial book
+
+## tweets テーブル
+
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| user               | references | null: false,foreign_key: true |
+| tweet              | references | null: false                   |
+
+### Assosiation
+belongs_to :user
+has_many :comments
+has_one :pictorial book
 
 
-- has_many :room_users
-- has_many :rooms, through: :room_users
-- has_many :messages
+## comments テーブル
 
-## rooms テーブル
-
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| name   | string | null: false |
-
-### Association
-
-- has_many :room_users
-- has_many :users, through: :room_users
-- has_many :messages
-
-## room_users テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
-
-## messages テーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| content | string     |                                |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| user               | references | null: false,foreign_key: true |
+| tweet              | references | null: false,foreign_key: true |
+| text               | text       | null: false                   |
 
 ### Association
+belongs_to :user
+belongs_to :tweet
 
-- belongs_to :room
-- belongs_to :user
+
+## pictorial books テーブル
+
+| Column             | Type       | Options                       |
+| ------------------ | ---------- | ----------------------------- |
+| tweet              | references | null: false,foreign_key: true |
+| user               | references | null: false,foreign_key: true |
+| plant_name         | string     | null: false                   |
+| type               | integer    | null: false                   |
+| place              | integer    | null: false                   |
+| date               | date       | null: false                   |
+
+### Assosiation
+belongs_to :user
+belongs_to :tweet
