@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Succulent Tweet</title>
-<%= stylesheet_link_tag 'ress.min', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'jquery-3.6.0.min' %>
-<%#= javascript_pack_tag 'style' %>
+<%= stylesheet_link_tag 'ress.min', media: 'all', 'data-turbolinks-track': 'reload'%>
+<%= stylesheet_link_tag 'grid', media: 'all', 'data-turbolinks-track': 'reload'%>
+ <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="img/favicon.png">
-    
+
 </head>
 <body>
 <header>    
@@ -53,43 +53,15 @@
 <div class="container">
 	<h2 class="catch">New Topic</h2>
 <div class="row">
+  <% @tweets.each do |tweet| %>
 	<div class="col span-4">
 	<figure>
-		<img src="img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
+		 <%= image_tag tweet.image.variant(resize: '500x500'), class: "col" if tweet.image.attached? %>
+		<figcaption><%= tweet.text %></figcaption>
 		</figure>
 	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-    </div>    
-<div class="row">
-	<div class="col span-4">
-	<figure>
-		<img src="img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
-	</div>
-	<div class="col span-4">
-	<figure>
-		<img src="img/catch.jpg" alt="画像">
-		<figcaption>キャプション</figcaption>
-		</figure>
+
+      <% end %>
 	</div>
     </div> 
 	<p class="center"><button>図鑑</button></p>
