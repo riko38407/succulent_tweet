@@ -983,6 +983,15 @@ div.contents.row .success h3 {
   margin: 10px auto;
 }
 
+.center{
+    height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center }
+div.container6 p {
+  margin: 0 }
+
+
 form input,
 form textarea {
   width: 100%;

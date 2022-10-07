@@ -3,4 +3,5 @@ class Tweet < ApplicationRecord
 
 
   validates :text, presence: true
+  validates :image, presence: true
 end
