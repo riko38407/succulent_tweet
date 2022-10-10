@@ -1,20 +1,17 @@
-
+<%= render "shared/header" %>
     <div class="mainimg">
              <%= image_tag "taniku.jpg" %>
         </div>
-    
-<h2 class="catch">New Topic</h2>
-
-
+    <p class="center">New Topic</p>
+<div class="catch">
   <% @tweets.each do |tweet| %>
     <div class="content_post" >
-     <%= link_to tweets_path(tweet.id) ,class: "content-link" do %>
-     <%= image_tag(tweet.image, class: :content_post_image ) %>
-     <%end%>
+  <%= image_tag tweet.image.variant(resize: '500x500'), class: "tweet-img" if tweet.image.attached? %>
       <p><%= tweet.text %></p>
       <span class="name">
         <%= tweet.title %>
       </span>
     </div>
-  <% end %>
+ <% end %>
 </div>
+<%= render "shared/footer" %>
