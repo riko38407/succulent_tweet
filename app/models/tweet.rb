@@ -9,4 +9,3 @@ class Tweet < ApplicationRecord
       validates :user_id
     end
   end
-end
