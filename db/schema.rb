@@ -34,10 +34,12 @@ ActiveRecord::Schema.define(version: 2022_10_07_085224) do
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user", null: false
+    t.bigint "user_id", null: false
+    t.string "title", null: false
     t.string "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -54,4 +56,5 @@ ActiveRecord::Schema.define(version: 2022_10_07_085224) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "tweets", "users"
 end
