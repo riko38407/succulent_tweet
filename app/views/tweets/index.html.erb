@@ -3,14 +3,17 @@
              <%= image_tag "taniku.jpg" %>
         </div>
     
-	<p class="center"><button>New Topic</button></p>
+<h2 class="catch">New Topic</h2>
 
 
   <% @tweets.each do |tweet| %>
-    <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+    <div class="content_post" >
+     <%= link_to tweets_path(tweet.id) ,class: "content-link" do %>
+     <%= image_tag(tweet.image, class: :content_post_image ) %>
+     <%end%>
       <p><%= tweet.text %></p>
       <span class="name">
-        <%= tweet.name %>
+        <%= tweet.title %>
       </span>
     </div>
   <% end %>

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
  * HTML5 display definitions
@@ -53,18 +54,23 @@ template {
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom. */
 html {
-  font-family: sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 /*
  * Remove default margin. */
 body {
-  margin: 0;
+  color: #000;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    background:#fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin:0;
+	padding:0;
 }
 
 /* ==========================================================================
@@ -870,6 +876,14 @@ div.contents.row div.content_post {
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
 }
 
+.content_post{
+  float: left;
+  padding: 20px 30px;
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
 div.contents.row div.content_post:after {
   content: '';
   position: absolute;
@@ -983,15 +997,6 @@ div.contents.row .success h3 {
   margin: 10px auto;
 }
 
-.center{
-    height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center }
-div.container6 p {
-  margin: 0 }
-
-
 form input,
 form textarea {
   width: 100%;
@@ -1044,13 +1049,15 @@ form input[type="submit"]:hover {
 }
 
 footer {
-  margin: 30px auto;
-  padding: 10px;
-  color: #D8D8D8;
+  background-color: var(--white-color);
+  padding: 3rem 0;
 }
 
 footer p {
+  border-bottom: 1px solid var(--border-color);
   text-align: center;
+    padding: 1rem 0;
+    background-color: var(--white-color);
 }
 
 .search-form {
@@ -1066,3 +1073,16 @@ footer p {
 .search-form .search-btn {
   width: 10%;
 }
+
+.mainimg{
+  width: 100vw;
+}
+
+.catch{
+  height: 10em;
+ display: flex;
+  align-items: center;
+  justify-content: center }
+div.container6 p {
+  margin: 0 }
+
