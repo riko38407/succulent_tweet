@@ -1,16 +1,14 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_tweet, except: [ :index, :new, :create]
+  before_action :set_tweet, except: [:index, :new, :create]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
     @tweets = Tweet.all.order('created_at DESC')
-   
   end
 
   def new
     @tweet = Tweet.new
-   
   end
 
   def create
@@ -21,7 +19,7 @@ class TweetsController < ApplicationController
       render :new
     end
   end
-  
+
   def destroy
     @tweet.destroy
   end
@@ -31,11 +29,9 @@ class TweetsController < ApplicationController
     @comment = Comment.new
   end
 
-def edit
-  unless user_signed_in?
-    redirect_to action: :edit
+  def edit
+    redirect_to action: :edit unless user_signed_in?
   end
-end
 
   def update
     if @tweet.update(tweet_params)
