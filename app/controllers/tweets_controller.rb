@@ -2,10 +2,12 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!
   def index
     @tweets = Tweet.includes(:user).limit(12)
+   
   end
 
   def new
     @tweet = Tweet.new
+    @tweet = Tweet.find(params[:id])
   end
 
   def create
@@ -18,8 +20,12 @@ class TweetsController < ApplicationController
   end
   
   def destroy
-    tweet = Tweet.find(params[:id])
-    tweet.destroy
+    @tweet = Tweet.find(params[:id])
+    @tweet.destroy
+  end
+
+  def show
+    @tweet = Tweet.find(params[:id])
   end
 
   private
