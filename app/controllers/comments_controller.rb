@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController 
   def create
     @comment = Comment.new(comment_params)
-    @tweet = Tweet.find(params[:tweet_id])
+    @tweet = Tweet.find(params[:tweet_id]) 
     if @comment.save
-      CommentChannel.broadcast_to @item, { comment: @comment, user: @comment.user }
+      redirect_to tweet_path(@comment.tweet)
+    end
   end
-end
 
   private
 

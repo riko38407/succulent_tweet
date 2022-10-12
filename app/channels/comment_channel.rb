@@ -1,6 +1,6 @@
 class CommentChannel < ApplicationCable::Channel
   def subscribed
-    @tweet = Item.find(params[:tweet_id])
+    @tweet = Tweet.find(params[:tweet_id])
     stream_for @tweet
   end
 
