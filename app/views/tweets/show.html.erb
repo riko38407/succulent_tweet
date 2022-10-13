@@ -6,14 +6,14 @@
        <%= @tweet.title%>
       </p>
       <%= link_to "by #{@tweet.user.name}",class: :prototype__user%>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+      
         <% if current_user == @tweet.user %>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_tweet_path(@tweet), class: :prototype__btn %>
           <%= link_to "削除する", tweet_path(@tweet), method: :delete, class: :prototype__btn %>
         </div>
        <% end %>
-      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+     
       <div class="prototype__image">
         <%= image_tag @tweet.image%>
       </div>
@@ -21,7 +21,7 @@
         <div class="prototype__detail">
           <p class="detail__title"></p>
           <p class="detail__message">
-            <%= @tweet.title%>
+            <%= @tweet.text%>
           </p>
         </div>
        
