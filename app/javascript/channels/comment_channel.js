@@ -1,10 +1,9 @@
 import consumer from "./consumer"
-if(location.pathname.match(/\/tweets\/\d/)){
 
-  consumer.subscriptions.create({
-    channel: "CommentChannel",
-    tweet_id: location.pathname.match(/\d+/)[0]
-  }, {
+if(location.pathname.match(/\/tweets\/\d/)){
+  
+consumer.subscriptions.create("CommentChannel", {
+  
   connected() {
     // Called when the subscription is ready for use on the server
   },
@@ -14,15 +13,8 @@ if(location.pathname.match(/\/tweets\/\d/)){
   },
 
   received(data) {
-    const html = `
-        <div class="comment">
-          <p class="user-info">${data.user.name}： </p>
-          <p>${data.comment.text}</p>
-        </div>`
-      const comments = document.getElementById("comments")
-      comments.insertAdjacentHTML('beforeend', html)
-      const commentForm = document.getElementById("comment-form")
-      commentForm.reset();
+    console.log(data)
   }
+
 })
 }
