@@ -50,7 +50,7 @@ Succulent Tweet
 (https://gyazo.com/eca666782292f024ee0ffc0fc2e71d1a)
 
 ・詳細ページにて投稿した画像を編集を行える
-
+(https://gyazo.com/c386e27bdce209139bf55c641116ff35)
 
 
 *実装予定の機能*
