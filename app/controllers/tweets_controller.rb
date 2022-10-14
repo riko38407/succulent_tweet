@@ -31,7 +31,6 @@ class TweetsController < ApplicationController
 
   def edit
   end
-  
 
   def update
     @comments = @tweet.comments.includes(:user)
