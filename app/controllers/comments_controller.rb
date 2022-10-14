@@ -1,9 +1,10 @@
 class CommentsController < ApplicationController 
+  before_action :authenticate_user!
   def create
     @comment = Comment.new(comment_params)
-    @tweet = Tweet.find(params[:tweet_id]) 
+    @tweet = Tweet.find(params[:tweet_id])
     if @comment.save
-      redirect_to tweet_path(@comment.tweet)
+      CommentChannel.broadcast_to @tweet, { comment: @comment, user: @comment.user }
     end
   end
 
