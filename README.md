@@ -41,16 +41,21 @@ Succulent Tweet
 *実装した機能についての画像やGIFおよびその説明*
 
 ・投稿した画像がフォームの一覧に表示されるGIF
+
 (https://gyazo.com/d8ce7ffd7a9c25fd824589e433f6ff31)
 
 ・投稿した画像をクリックすると詳細ページに遷移するGIF
+
 (https://gyazo.com/a43d181da708d7162cc6af13f004e172)
 
 ・詳細ページにて登録したユーザーのみコメントができるGIF
+
 (https://gyazo.com/eca666782292f024ee0ffc0fc2e71d1a)
 
-・詳細ページにて投稿した画像を編集を行える
+・詳細ページにて投稿した画像を編集を行えるGIF
+
 (https://gyazo.com/c386e27bdce209139bf55c641116ff35)
+
 
 
 *実装予定の機能*
