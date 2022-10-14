@@ -154,12 +154,17 @@ belongs_to :follow, class_name: 'User'
 *ローカルでの動作確認方法*
 
 以下のコマンドを順に実行
+
 % git clone https://github.com/riko38407/succulent_tweet.git
+
 % cd succulent_tweet
+
 % bundle install
+
 % yarn install
 
 
 *工夫したポイント*
+
 フロント実装にてサンプルの画像を複数用意し、それをスライドとしてフロントに配置投稿対象のサボテン、多肉植物のサンプル画像としてフロント実装を行いました。
 また、新しく投稿された画像は左から新規投稿画像が閲覧可能にし、各詳細ページにてコメント機能を実装を行いました。
