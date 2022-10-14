@@ -10,8 +10,11 @@ Succulent Tweet
 
 # テスト用アカウント
 ・ Basic認証パスワード :admin
+
 ・ Basic認証ID :2222
+
 ・ メールアドレス : test@test.jp
+
 ・ パスワード :test11
 
 *利用方法*
