@@ -22,16 +22,16 @@ https://succulent-tweet-38407.herokuapp.com/
 
 
 
-## 利用方法
+# 利用方法
 
-# 画像投稿
+## 画像投稿
 
 1. トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う
 2. 新規投稿ボタンから、テキスト、画像を入力し投稿する
 3. 投稿した画像から詳細ページに遷移する
 4. 詳細ページでは登録したユーザーのみコメントすることができる
 
-# 図鑑機能
+## 図鑑機能
 
 1. 一覧ページから遷移し自身が投稿した植物を編集できる
 2. ユーザーは項目ごとに分けて閲覧が可能
@@ -67,17 +67,21 @@ https://succulent-tweet-38407.herokuapp.com/
 
 # 実装予定の機能
 
-現在はフォロー機能を実装中
-今後は図鑑機能を実装予定
+現在はフォロー機能を実装中。
 
-## データベース設計
+今後は図鑑機能を実装予定。
 
-![succulent_table](https://user-images.githubusercontent.com/111741304/195542549-eb15d5dc-6400-4109-9bd0-de0d839d465b.png)
+# データベース設計
 
 
-## 画面遷移図
+![succulent_table](https://user-images.githubusercontent.com/111741304/196095537-c9b568b5-1504-4526-8f97-6caea63797ba.png)
 
-![succulent](https://user-images.githubusercontent.com/111741304/195543731-0d463136-82c0-4901-89ee-6a520455b3bf.png)
+
+# 画面遷移図
+
+
+![succulent](https://user-images.githubusercontent.com/111741304/196095575-ef234dfd-9fb2-4ad0-993e-e65ee384e454.png)
+
 
 
 ## users テーブル
