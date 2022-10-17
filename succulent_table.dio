@@ -4,7 +4,7 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="users テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;strokeColor=#F0F0F0;fillColor=#FFCCE6;" parent="1" vertex="1">
+                <mxCell id="2" value="users テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;strokeColor=#1A1A1A;fillColor=#FFCCE6;" parent="1" vertex="1">
                     <mxGeometry x="120" y="80" width="180" height="130" as="geometry">
                         <mxRectangle x="120" y="80" width="120" height="30" as="alternateBounds"/>
                     </mxGeometry>
@@ -12,19 +12,19 @@
                 <mxCell id="3" value="・name&#10;・email&#10;・encrypted_password&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="2" vertex="1">
                     <mxGeometry y="30" width="180" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="tweets テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#99FFFF;" parent="1" vertex="1">
+                <mxCell id="8" value="tweets テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#99FFFF;strokeColor=#1A1A1A;" parent="1" vertex="1">
                     <mxGeometry x="420" y="290" width="180" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="9" value="・user&#10;・text" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="8" vertex="1">
                     <mxGeometry y="30" width="180" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="comments テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#FFB366;" parent="1" vertex="1">
+                <mxCell id="11" value="comments テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#FFB366;strokeColor=#1A1A1A;" parent="1" vertex="1">
                     <mxGeometry x="647" y="90" width="180" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="・user&#10;・tweet&#10;・text" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="11" vertex="1">
                     <mxGeometry y="30" width="180" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="pictorial books　テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#E5CCFF;" parent="1" vertex="1">
+                <mxCell id="13" value="pictorial books　テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#E5CCFF;strokeColor=#1A1A1A;" parent="1" vertex="1">
                     <mxGeometry x="70" y="300" width="180" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="14" value="・tweet&#10;・user&#10;・plant_name&#10;・type&#10;・place・date " style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="13" vertex="1">
@@ -60,7 +60,7 @@
                         <mxPoint x="460" y="250" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" value="　relationships テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#CCFF99;strokeColor=#F0F0F0;" parent="1" vertex="1">
+                <mxCell id="23" value="　relationships テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#CCFF99;strokeColor=#1A1A1A;" parent="1" vertex="1">
                     <mxGeometry x="120" y="-120" width="180" height="130" as="geometry">
                         <mxRectangle x="120" y="-120" width="180" height="30" as="alternateBounds"/>
                     </mxGeometry>
