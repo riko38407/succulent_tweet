@@ -74,7 +74,7 @@ https://succulent-tweet-38407.herokuapp.com/
 # データベース設計
 
 
-![succulent_table](https://user-images.githubusercontent.com/111741304/196095537-c9b568b5-1504-4526-8f97-6caea63797ba.png)
+
 
 
 # 画面遷移図
