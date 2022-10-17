@@ -2,8 +2,9 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   def create
       @comment = Comment.new(comment_params)
+      @tweet = Tweet.find(params[:tweet_id])
       if @comment.save
-        ActionCable.server.broadcast "comment_channel", {comment: @comment, user: @comment.user}
+        CommentChannel.broadcast_to @tweet, { comment: @comment, user: @comment.user }
         end
       end
 
