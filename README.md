@@ -169,8 +169,11 @@ belongs_to :follow, class_name: 'User'
 以下のコマンドを順に実行
 
 % git clone https://github.com/riko38407/succulent_tweet.git
+
 % cd succulent_tweet
+
 % bundle install
+
 % yarn install
 
 
