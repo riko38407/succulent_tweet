@@ -36,7 +36,7 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
     @comment = Comment.new
     if @tweet.update(tweet_params)
-      render 'show'
+      redirect to 'show'
     else
       render 'edit'
     end
