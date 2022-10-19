@@ -929,7 +929,7 @@ form input[type="submit"]:hover {
   background-color: #84d3ef;
 }
 
-.container {
+.comment-form {
   margin: 20px 0;
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
@@ -937,7 +937,7 @@ form input[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-.container h3 {
+.comment-form h3 {
   margin: 0 0 20px;
   text-align: center;
   font-weight: normal;
