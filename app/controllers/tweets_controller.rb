@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_tweet, except: [:index, :new, :create]
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
@@ -16,7 +16,7 @@ class TweetsController < ApplicationController
     if @tweet.save
       redirect_to root_path
     else
-      render :new
+      render 'new'
     end
   end
 
@@ -30,12 +30,13 @@ class TweetsController < ApplicationController
   end
 
   def edit
-    redirect_to action: :edit unless user_signed_in?
   end
 
   def update
+    @comments = @tweet.comments.includes(:user)
+    @comment = Comment.new
     if @tweet.update(tweet_params)
-      redirect_to  'show'
+      render 'show'
     else
       render 'edit'
     end
@@ -52,6 +53,10 @@ class TweetsController < ApplicationController
   end
 
   def contributor_confirmation
-    redirect_to root_path unless current_user == @tweet.user
+    if user_signed_in? && current_user.id == @tweet.user_id
+
+    else
+      redirect_to root_path
+    end
   end
 end

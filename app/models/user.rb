@@ -13,4 +13,4 @@ class User < ApplicationRecord
     validates :name, presence: true
     VALID_NAME_REGEX = /\A[ぁ-んァ-ン一-龥々]+\z/
   end
-end
+  end

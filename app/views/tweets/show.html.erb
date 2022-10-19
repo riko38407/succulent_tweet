@@ -6,14 +6,14 @@
        <%= @tweet.title%>
       </p>
       <%= link_to "by #{@tweet.user.name}",class: :prototype__user%>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+      
         <% if current_user == @tweet.user %>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_tweet_path(@tweet), class: :prototype__btn %>
           <%= link_to "削除する", tweet_path(@tweet), method: :delete, class: :prototype__btn %>
         </div>
        <% end %>
-      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
+     
       <div class="prototype__image">
         <%= image_tag @tweet.image%>
       </div>
@@ -21,19 +21,29 @@
         <div class="prototype__detail">
           <p class="detail__title"></p>
           <p class="detail__message">
-            <%= @tweet.title%>
+            <%= @tweet.text%>
           </p>
         </div>
        
-      <div class="container">
+      <div class="comment-form">
     <% if user_signed_in? %>
-      <%= render partial: 'comments/form', locals: { comments: @comments } %>
+     <%= form_with model: [@tweet, @comment],id: "comment-form" do |f| %>
+         <%= f.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= f.submit "SEND" %>
+      <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
-    <div class="comments">
+    <div id="comments">
       <h4>＜コメント一覧＞</h4>
-     <%= render partial: 'comments/index', locals: { comment: @comment, post: @tweet } %>
+      <% @tweet.comments.each do |comment| %>
+       <div class="comment">
+       <p>
+      <strong class="user-info"><%= comment.user.name %>： </strong>
+          <%= comment.text%>
+          </p>
+      </div>
+      <%end %>
     </div>
 </main>
 <%= render "shared/footer" %>

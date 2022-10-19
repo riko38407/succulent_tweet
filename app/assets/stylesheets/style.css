@@ -878,6 +878,7 @@ div.contents.row div.content_post {
 
 .center{
   text-align: center;
+  font-size: 30px;
 }
 .catch{
   display: flex;
@@ -928,7 +929,7 @@ form input[type="submit"]:hover {
   background-color: #84d3ef;
 }
 
-.container {
+.comment-form {
   margin: 20px 0;
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
@@ -936,7 +937,7 @@ form input[type="submit"]:hover {
   box-sizing: border-box;
 }
 
-.container h3 {
+.comment-form h3 {
   margin: 0 0 20px;
   text-align: center;
   font-weight: normal;
@@ -960,7 +961,7 @@ form input[type="submit"]:hover {
 footer {
   margin: 30px auto;
   padding: 10px;
-  color: #D8D8D8;
+  color: #666;
 }
 
 
@@ -982,8 +983,55 @@ footer p {
   width: 10%;
 }
 
-.mainimg{
-  width: 100vw;
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_cssslider {
+	width: 600px;
+	padding-top: 500px; /* 画像の高さ */
+	position: relative;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_cssslider > img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.5s;
+	border-radius: 3px;
+	box-shadow:0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+.cp_cssslider input[name='cp_switch'] {
+	display: none;
+}
+/* サムネイル */
+.cp_cssslider label {
+	margin: 15px 5px 0 5px;
+	border: 2px solid #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	opacity: 0.6;
+	border-radius: 3px;
+}
+.cp_cssslider label:hover {
+	opacity: 0.9;
+}
+.cp_cssslider label img {
+	display: block;
+	width: 40px;
+	border-radius: 2px;
+}
+.cp_cssslider input[name='cp_switch']:checked + label {
+	border: 2px solid #FF7043;
+	opacity: 1;
+}
+.cp_cssslider input[name='cp_switch'] ~ img {
+	opacity: 0;
+}
+.cp_cssslider input[name='cp_switch']:checked + label + img {
+	opacity: 1;
 }
 
 .inner {
