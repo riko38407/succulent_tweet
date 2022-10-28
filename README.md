@@ -147,8 +147,7 @@ belongs_to :tweet
 
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
-| user               | references | null: false,foreign_key: true |
-| follow_id          | references | null: false,foreign_key: true |
+| follow_id          | integer    | null: false,foreign_key: true |
 | followed_id        | integer    | null: false,foreign_key: true |
 
 ### Assosiation
