@@ -6,6 +6,12 @@ RSpec.describe User, type: :model do
   end
 
    describe 'ユーザー新規登録' do
+    context '新規登録できるとき' do
+    it 'nameとemail、passwordとpassword_confirmationが存在すれば登録できる' do
+      expect(@user).to be_valid
+    end
+  end
+  context '新規登録できないとき' do
       it 'nameが空では登録できない' do
         @user.name = ''
         @user.valid?
@@ -57,7 +63,6 @@ RSpec.describe User, type: :model do
        expect(@user.errors.full_messages).to include("Password is too long (maximum is 128 characters)")
       end
 
-      end
       it 'パスワード（確認含む）が全角文字を含むパスワードでは登録できない' do
         @user.password = 'ああああああ'
         @user.password_confirmation = 'あああああ'
@@ -85,4 +90,5 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
     end
-
+  end
+end
