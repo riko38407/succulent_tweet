@@ -10,7 +10,8 @@ class User < ApplicationRecord
   validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers'
 
   with_options presence: true do
-    validates :name, presence: true
+    validates :name
     VALID_NAME_REGEX = /\A[ぁ-んァ-ン一-龥々]+\z/
+    validates :email
   end
   end
