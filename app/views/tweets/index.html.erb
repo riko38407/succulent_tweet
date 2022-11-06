@@ -20,8 +20,8 @@
 <div class="catch">
   <% @tweets.each do |tweet| %>
    <%= link_to tweet_path(tweet) do %>
-    <div class="content_post" >
-  <%= image_tag tweet.image.variant(resize: '800x800'), class: "tweet-img" if tweet.image.attached?%>
+    <div class="contents_post" >
+  <%= image_tag tweet.image.variant(resize: '500x500'), class: "tweet-img" if tweet.image.attached?%>
       <p><%= tweet.text %></p>
      <%= link_to tweet.title, tweets_path(tweet), class: :card__title%>
       <span class="name">
