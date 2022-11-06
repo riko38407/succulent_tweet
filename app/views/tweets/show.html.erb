@@ -7,9 +7,10 @@
       </p>
 
       <%= link_to "by #{@tweet.user.name}",class: :prototype__user%>
-      <p class="text-small"><%= link_to @user.followings.count, root_path(@user) %> フォロー <%= link_to @user.followers.count, root_path(@user) %> フォロワー</p>
-    <% if @user == current_user %>
- <% if @user.is_followed_by?(current_user) %>
+      
+   <% if @user == current_user %>
+<% else %>
+  <% if @user.is_followed_by?(current_user) %>
      <%= link_to  user_relationships_path(@user), method: :delete do%>
      <button >フォロー解除</button>
      <% end %>
@@ -17,9 +18,8 @@
     <%= link_to user_relationships_path(@user), method: :post do%>
     <button >フォロー</button>
    <% end %>
-   <% end %>
-  <% end %>
- 
+ <% end %>
+ <% end %>
 
       <% if current_user == @tweet.user %>
         <div class="prototype__manage">
