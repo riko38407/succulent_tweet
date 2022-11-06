@@ -65,7 +65,9 @@
                         <mxRectangle x="120" y="-120" width="180" height="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="24" value="&#10;・follow_id&#10;・followde_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="23" vertex="1">
+
+                <mxCell id="24" value="・following_id&#10;・follower_id" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="23" vertex="1">
+
                     <mxGeometry y="30" width="180" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="25" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=0.992;exitY=0.12;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="24" edge="1">

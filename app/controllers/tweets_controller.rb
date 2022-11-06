@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show ]
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
@@ -27,6 +27,7 @@ class TweetsController < ApplicationController
   def show
     @comments = @tweet.comments.includes(:user)
     @comment = Comment.new
+    @user = User.find_by(params[:id])
   end
 
   def edit
@@ -41,6 +42,8 @@ class TweetsController < ApplicationController
       render 'edit'
     end
   end
+ 
+
 
   private
 
