@@ -150,6 +150,7 @@ belongs_to :tweet
 | following_id       | integer    | null: false,foreign_key: true |
 | follower_id        | integer    | null: false,foreign_key: true |
 
+
 ### Assosiation
 belongs_to :user
 belongs_to :follow, class_name: 'User'
