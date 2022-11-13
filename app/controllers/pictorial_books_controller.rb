@@ -1,0 +1,2 @@
+class PictorialBooksController < ApplicationController
+end
