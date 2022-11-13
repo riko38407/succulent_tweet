@@ -1,7 +1,6 @@
  <%= render "shared/header" %>
 <div class="contents row">
 <p class="text-small"><%= link_to @user.followings.count, followings_user_path(@user) %> フォロー <%= link_to @user.followers.count, followers_user_path(@user) %> フォロワー</p>
- 
   <p><%= @name %>さんの投稿一覧</p>
   <% @tweets.each do |tweet| %>
   <div class="content_post">
