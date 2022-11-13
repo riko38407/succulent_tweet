@@ -1,0 +1,2 @@
+class PictorialBook < ApplicationRecord
+end
