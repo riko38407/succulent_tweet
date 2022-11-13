@@ -125,12 +125,11 @@ belongs_to :user
 belongs_to :tweet
 
 
-## pictorial books テーブル
+## pictorial_books テーブル
 
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
-| tweet              | references | null: false,foreign_key: true |
-| user               | references | null: false,foreign_key: true |
+| user               | references | null: false, foreign_key: true |
 | plant_name         | string     | null: false                   |
 | type               | integer    | null: false                   |
 | place              | integer    | null: false                   |
@@ -140,7 +139,6 @@ belongs_to :tweet
 
 ### Assosiation
 belongs_to :user
-belongs_to :tweet
 
 
 ## Relationships テーブル
