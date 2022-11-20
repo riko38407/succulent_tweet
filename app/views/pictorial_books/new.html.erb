@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+<div class="contents row">
+  <div class="container">
+    <h3>図鑑登録する</h3>
+     <%= form_with model: @pictorial_book, local: true do |f| %>
+      <%= f.text_field :plant_name, placeholder: "植物名" %>
+      <%= f.file_field :image, id:"pictorial_book-image" %>
+      <%= f.text_area :type, placeholder: "種類" %>
+      <%= f.text_field :difficulty, placeholder: "栽培難易度" %>
+      <%= f.text_area :cultivation, placeholder: "育て方" %>
+      <%= f.text_area :data, placeholder: "日付" %>
+      <%= f.submit "登録" %>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>
