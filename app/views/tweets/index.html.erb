@@ -32,6 +32,8 @@
  <% end %>
 </div>
 
-<div class= "pictorial book"><button>図　鑑</button>
+<div class= "pictorial_book">
+ <%= link_to "図鑑",  pictorial_books_path(@pictorial_book)%>
+    
 </div>
 <%= render "shared/footer" %>

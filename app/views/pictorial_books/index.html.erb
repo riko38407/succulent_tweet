@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+<%= form_with(url: root_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
+
+<div class="contents row">
+  <div class="success">
+  <p>
+ <%= link_to "図鑑に登録する",pictorial_books_path(@pictorial_book) %> </p>
+     <a class="btn" href="/">ホームへ戻る</a>
+  </div>
+</div>
+
+<div class="book">
+<%= link_to "サボテン科",root_path%>
+<%= link_to "エケベリア",root_path%>
+<%= link_to "セダム",root_path%>
+<%= link_to "カランコエ",root_path%>
+<%= link_to "センペルビウム",root_path%>
+</div>
+
+<%= render "shared/footer" %>

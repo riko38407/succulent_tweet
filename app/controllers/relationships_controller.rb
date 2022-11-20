@@ -1,5 +1,5 @@
 class RelationshipsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show, :index]
   def create
     following = current_user.relationships.build(follower_id: params[:user_id])
     following.save
@@ -7,7 +7,7 @@ class RelationshipsController < ApplicationController
   end
 
   def destroy
-    following = current_user.relationships.find_by(follower_id: params[:user_id])
+    reverse_of_relationships.find_by(following_id: user.id).present?
     following.destroy
     redirect_to request.referrer || root_path
     end

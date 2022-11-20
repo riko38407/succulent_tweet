@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   resources :tweets do
     resources :comments, only: :create
   end
+
+  resources :pictorial_books
 end
 
