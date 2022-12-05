@@ -72,3 +72,7 @@ gem 'devise'
 gem "aws-sdk-s3", require: false
 
 gem 'active_hash'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
