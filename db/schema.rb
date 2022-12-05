@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 2022_11_13_081938) do
   create_table "pictorial_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.string "plant_name", null: false
-    t.integer "type", null: false
-    t.integer "difficulty", null: false
+    t.integer "type_id", null: false
+    t.integer "difficulty_id", null: false
     t.text "cultivation", null: false
     t.date "data", null: false
     t.datetime "created_at", precision: 6, null: false

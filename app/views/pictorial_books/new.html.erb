@@ -5,10 +5,10 @@
      <%= form_with model: @pictorial_book, local: true do |f| %>
       <%= f.text_field :plant_name, placeholder: "植物名" %>
       <%= f.file_field :image, id:"pictorial_book-image" %>
-      <%= f.text_area :type, placeholder: "種類" %>
-      <%= f.text_field :difficulty, placeholder: "栽培難易度" %>
+      <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select-box"}) %> 
+      <%= f.collection_select(:difficulty_id, Difficulty.all, :id, :name, {}, {class:"select-box"})%>
       <%= f.text_area :cultivation, placeholder: "育て方" %>
-      <%= f.text_area :data, placeholder: "日付" %>
+      <%= f.date_select :data, placeholder: "日付" %>
       <%= f.submit "登録" %>
     <% end %>
   </div>
