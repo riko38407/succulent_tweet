@@ -8,7 +8,7 @@ Succulent Tweet
 
 # URL
 
-https://succulent-tweet-38407.herokuapp.com/
+https://succulenttweet-38407.onrender.com
 
 # テスト用アカウント
 
@@ -16,9 +16,8 @@ https://succulent-tweet-38407.herokuapp.com/
 
 ・ Basic認証ID :2222
 
-・ メールアドレス : test@test.jp
-
-・ パスワード :test11
+・ メールアドレス : sample123@example.com
+・ パスワード :sample123
 
 
 
