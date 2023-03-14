@@ -9,4 +9,5 @@ class Tweet < ApplicationRecord
     validates :text
     validates :image
   end
+  
 end
